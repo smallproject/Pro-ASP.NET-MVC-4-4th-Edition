@@ -1,0 +1,47 @@
+﻿@model PartyInvites.Models.Account
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Account_register</title>
+</head>
+<body>
+    <div>
+        <h1>Welcome @Model.firstname</h1>
+        <p>
+            @Html.LabelFor(x => x.firstname)
+            @Model.firstname
+        </p>
+        <p>
+            @Html.LabelFor(x => x.middlename)
+            @Model.middlename
+        </p>
+        <p>
+            @Html.LabelFor(x => x.lastname)
+            @Model.lastname
+        </p>
+        <p>
+            @Html.LabelFor(x => x.gender)
+            @Model.gender
+        </p>
+        <p>
+            @Html.LabelFor(x => x.birthdate)
+            @Model.birthdate
+        </p>
+        <p>
+            @Html.LabelFor(x => x.email)
+            @Model.email
+        </p>
+        <p>
+            @Html.LabelFor(x => x.agree)
+            @Model.agree
+        </p>
+    </div>
+</body>
+</html>

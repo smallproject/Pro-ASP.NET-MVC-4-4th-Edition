@@ -1,0 +1,32 @@
+﻿@model PartyInvites.Models.Register
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css"/>
+    <title>Register</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+            <h1>Registration</h1>
+            <p>@Html.LabelFor(x => x.Firstname)@Html.TextBoxFor(x => x.Firstname)</p>
+            <p>@Html.LabelFor(x => x.Lastname)@Html.TextBoxFor(x => x.Lastname)</p>
+            <p>@Html.LabelFor(x => x.Username)@Html.TextBoxFor(x => x.Username)</p>
+            <p>@Html.LabelFor(x => x.Password)@Html.TextBoxFor(x => x.Password)</p>
+            <p>@Html.LabelFor(x => x.gender)@Html.TextBoxFor(x => x.gender)</p>
+            <p>@Html.LabelFor(x => x.birthdate)@Html.TextBoxFor(x => x.birthdate)</p>
+            <input type="submit"  value="Submit Register" />
+        }
+    </div>
+
+</body>
+</html>

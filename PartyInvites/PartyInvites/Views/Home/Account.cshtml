@@ -1,0 +1,54 @@
+﻿@model PartyInvites.Models.Account
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Account</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+{
+    <p>
+        @Html.LabelFor(x => x.firstname)
+        @Html.TextBoxFor(x => x.firstname)
+    </p>
+    <p>
+        @Html.LabelFor(x => x.middlename)
+        @Html.TextBoxFor(x => x.middlename)
+    </p>
+    <p>
+        @Html.LabelFor(x => x.lastname)
+        @Html.TextBoxFor(x => x.lastname)
+    </p>
+    <p>
+        @Html.LabelFor(x => x.gender)
+        @Html.DropDownListFor(x => x.gender, new[] {
+       new SelectListItem {Text = "Male"},
+       new SelectListItem {Text = "Female"}}, "Select from the list")
+    </p>
+    <p>
+        @Html.LabelFor(x => x.birthdate)
+        @Html.TextBoxFor(x => x.birthdate)
+    </p>            
+    <p>
+        @Html.LabelFor(x => x.email)
+        @Html.TextBoxFor(x => x.email)
+    </p>
+    <p>
+        @Html.CheckBoxFor(x => x.agree)
+        @Html.LabelFor(x => x.agree)
+    </p>
+    <p>
+        <input type="submit" name="sumbit" value="Register" />
+    </p>
+}
+    </div>
+</body>
+</html>
